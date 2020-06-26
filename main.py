@@ -28,7 +28,7 @@ shutil.copy(os.path.join(orgpath, 'extract4.bat'), os.path.join(newpath, 'extrac
 shutil.copy(os.path.join(orgpath, 'extract1.txt'), os.path.join(newpath, 'extract1.txt'))
 shutil.copy(os.path.join(orgpath, 'extract2.txt'), os.path.join(newpath, 'extract2.txt'))
 shutil.copy(os.path.join(orgpath, 'train.txt'), os.path.join(newpath, 'train.txt'))
-shutil.copy(os.path.join(orgpath, 'train.txt'), os.path.join(newpath, 'extract1.txt'))
+shutil.copy(os.path.join(orgpath, 'train.bat'), os.path.join(newpath, 'train.bat'))
 shutil.copy(os.path.join(orgpath, 'ModelBase.py'), os.path.join('DeepFaceLab\_internal\DeepFaceLab\models', 'ModelBase.py'))
 
 with open(os.path.join(orgpath, 'Trainer.py'), 'r') as f:
