@@ -12,6 +12,12 @@ sys.path.append("DeepFaceLab\\")
 # 确定训练代数
 iter = input('Please input the iterations\n')
 
+# 建立基础工作空间
+path = 'DeepFaceLab\workspace_base'
+folder = os.path.exists(path)
+if not folder:
+    os.makedirs(path)
+
 # 添加或改动必要文件
 orgpath = 'subfile'
 newpath = 'DeepFaceLab'
@@ -33,13 +39,13 @@ with open(os.path.join(orgpath, 'Trainer.py'), 'r') as f:
 # 读取模特视频
 model_vedios = []
 for filename in os.listdir(r'model_vedio/'):
-    if filename[-3:] == 'mp4':
+    if filename[-3:] == 'mp4' or filename[-3:] == 'MP4':
         model_vedios.append(filename)
 
 # 读取学生视频
 student_vedios = []
 for filename in os.listdir(r'student_vedio/'):
-    if filename[-3:] == 'mp4':
+    if filename[-3:] == 'mp4' or filename[-3:] == 'MP4':
         student_vedios.append(filename)
 
 # 如果当前工作目录已存在
