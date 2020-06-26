@@ -30,16 +30,17 @@ with open(os.path.join(orgpath, 'Trainer.py'), 'r') as f:
         fd.write(re.sub(r'model.target_iter = 100000', 'model.target_iter = %s' % iter, f.read()))
 
 
-
 # 读取模特视频
 model_vedios = []
 for filename in os.listdir(r'model_vedio/'):
-    model_vedios.append(filename)
+    if filename[-3:] == 'mp4':
+        model_vedios.append(filename)
 
 # 读取学生视频
 student_vedios = []
 for filename in os.listdir(r'student_vedio/'):
-    student_vedios.append(filename)
+    if filename[-3:] == 'mp4':
+        student_vedios.append(filename)
 
 # 如果当前工作目录已存在
 if os.path.exists('DeepFaceLab/workspace'):
