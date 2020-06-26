@@ -35,7 +35,6 @@ with open(os.path.join(orgpath, 'Trainer.py'), 'r') as f:
     with open(os.path.join('DeepFaceLab\_internal\DeepFaceLab\mainscripts', 'Trainer.py'), 'w') as fd:
         fd.write(re.sub(r'model.target_iter = 100000', 'model.target_iter = %s' % iter, f.read()))
 
-
 # 读取模特视频
 model_vedios = []
 for filename in os.listdir(r'model_vedio/'):
