@@ -166,11 +166,11 @@ class ModelBase(object):
         if self.default_options_path.exists():
             try:
                 self.default_options = pickle.loads ( self.default_options_path.read_bytes() )
-                self.default_options['face_type'] = 'wf'
+
                 self.default_options['target_iter'] = 50
             except:
                 pass
-
+        self.default_options['face_type'] = 'wf'
         self.choose_preview_history = False
         self.batch_size = self.load_or_def_option('batch_size', 1)
         #####
